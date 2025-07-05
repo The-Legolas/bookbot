@@ -1,10 +1,10 @@
 #This is where the main thing happens
 def main():
-    # This takes the text-list and splits them so I can count them later
-    text = split_words()
-    
+    text = get_book_text("books/frankenstein.txt") 
+    num_words = get_num_words(text)
+
     # This prints the required assignment
-    print(f"{len(text)} words found in the document")
+    print(f"{num_words} words found in the document")
 
 
 # This function finds the file with a given filepath
@@ -13,12 +13,12 @@ def get_book_text(path_to_file):
     with open(path_to_file) as file:
         return file.read()
     
-def split_words():
-    text = get_book_text("books/frankenstein.txt")
-
+def get_num_words(text):
     # This splits the strings up into a list so I can
     # count up the number of words.
     words = text.split()
-    return words
+
+    # This takes the text-list and splits them so I can count them later
+    return len(words)
 
 main()
