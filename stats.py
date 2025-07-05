@@ -17,21 +17,17 @@ def get_book_text(path_to_file):
 def get_count_characters(text):
     
     list_of_characters = {}
-    #num_characters = {}
-
+    
     for character in text.lower():
         if character not in list_of_characters:
             list_of_characters[character] = 1
         else:
             list_of_characters[character] += 1
-    
-    """
-    for character in list_of_characters:
-        for i in character:
-            if character not in num_characters:
-                num_characters.update({character: + 1})
-            else:
-                num_characters.update({character:  1})
-        pass
-    """    
-    return list_of_characters
+    new_list = []
+
+    for char, num in list_of_characters.items():
+        new_list.append({"char": char, "num": num})
+    return new_list
+
+def sort_on(items):
+    return items["num"]
