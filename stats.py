@@ -11,7 +11,8 @@ def get_num_words(text):
 # And then converts it into a string for python to rea#d
 def get_book_text(path_to_file):
     with open(path_to_file) as file:
-        return file.read()
+       return file.read()
+   
 
 
 def get_count_characters(text):
