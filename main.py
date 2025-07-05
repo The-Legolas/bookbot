@@ -8,10 +8,14 @@ def main():
     text = get_book_text("books/frankenstein.txt") 
     num_words = get_num_words(text)
     chars_num = get_count_characters(text)
-
+ 
 
     # This prints the required assignment
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
     print(f"{num_words} words found in the document")
+    print("--------- Character Count -------")
     print(chars_num)
 
 
